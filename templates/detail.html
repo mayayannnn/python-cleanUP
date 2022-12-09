@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+    {% block content %}
+    <form action="/update/{{file.id}}" method="post" enctype="multipart/form-data">
+<p>今の画像</p>
+<img src="../{{ file.file }}" alt="" width="20%" height="10%">
+<p>ファイルを選択してください（必須）</p>
+    <input type="file" capture = "camera"name="syuunounomono">
+    <p> 名前を付けてください（必須） </p>
+    <input type="text" required class="form-control" name="syuunoumonomemo" placeholder="名前" aria-label="Username" aria-describedby="basic-addon1"
+         value="{{file.name}}">
+    <p>種類を選択してください（必須）</p>
+    <select size="1" name="syuunousyurui" class="form-select" required>
+        <option value="食べ物">食べ物</option>
+        <option value="植物">植物</option>
+        <option value="服">服</option>
+        <option value="文房具">文房具</option>
+        <option value="書物">書物</option>
+        <option value="機械">機械</option>
+        <option value="日用品">日用品</option>
+        <option value="その他">その他</option>
+    </select>
+    <br>
+    <p>場所を書いてください（必須）</p>
+    <input placeholder="場所" aria-label="Username" aria-describedby="basic-addon1" class="form-control" type="text" name="syuunoumonobasyo" value="{{file.basyo}}">
+    <p>
+        <select size="1" name="syuunoukouho" class="form-select">
+            <option value="リビング">リビング</option>
+            <option value="タンス">タンス</option>
+            <option value="クローゼット">クローゼット</option>
+            <option value="寝室">寝室</option>
+            <option value="廊下">廊下</option>
+            <option value="キッチン">キッチン</option>
+            <option value="玄関">玄関</option>
+            <option value="下駄箱">下駄箱</option>
+            <option value="浴室">浴室</option>
+            <option value="洗面所">洗面所</option>
+            <option value="地下室">地下室</option>
+        </select>
+        <p> 次に使うのはいつですか</p>
+        <input  value="{{file.hiniti.strftime('%Y-%m-%d')}}"  type="date" name="syuunouhiniti" required class="form-control" id="date_sample">
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" name="me-ru"  class="btn-check" id="btncheck1" autocomplete="off">
+        <!-- <label class="btn btn-outline-primary" for="btncheck1">メール</label> -->
+        </div>
+    </p>
+    <p>メモ等を書いてください（自由記入）
+    </p>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="syuunouziyuu" id="" cols="30" rows="10" style="height: 100px;"></textarea>
+        <label for="floatingTextarea2">{{file.memo}}</label>
+      </div>
+      <br>
+      <div class="d-flex justify-content-end">
+    <input  class="btn btn-primary" type="submit" value ="更新">
+    </div>
+    </form>
+    {% endblock %}

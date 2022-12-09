@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+    {% block content %}
+    <br>  
+    <br>
+
+        <main>
+      
+
+            <form action="/syuunousyasinn" method="get" >
+              <div >
+                <div id="form1" >
+                    <input id="sbox"  id="s" name="search_text" type="text" placeholder="キーワードを入力" value="{{search_text}}">
+                    <button><input id="sbtn" type="submit" value="検索"></button>
+                </div>
+              </div>
+              </form>
+              <br><br>
+              {% if file|length > 0 %}
+            <table class="table  table-striped  table-bordered" width = "100%" height = "100%">
+            </div >
+                  <tr class="itirann">
+                    <th>名前</th>
+                    <th>場所</th>
+                    <th>種類</th>
+                    <th>日にち</th>
+                    <th>メモ</th>
+                    <th>写真</th>
+                  </tr>
+                {% for f in file %}
+                  <tr>
+                    <td>{{f.name}}</td>
+                <td>{{f.basyo}}</td>
+                <td>{{f.syurui}}</td>
+                <td>{{f.hiniti.strftime("%Y/%m/%d")}}</td>
+                <td>{{f.memo}}</td>
+                <td style="text-align:center;" >
+            
+
+              <a href="{{f.file}}" data-lightbox="group">  <img src="{{ f.file }}" alt="" width="200px" height="200px"></a>
+            
+              <a class="btn btn-outline-danger"  href="/delete/{{f.id}}"  onclick="return confirm('削除してもいいですか？')" >削除</a>
+               <a class="btn btn-outline-success" href="/detail/{{f.id}}">編集</a>
+              </td>
+              
+              </tr>
+                {% endfor %}    
+                </table>  
+                {% endif %}
+                <a class="top"  href="#top">∧</a>
+
+
+                {% if file|length == 0 %}
+                <h3>入力したキーワードは見つかりませんでした。</h3>
+                  {% endif %}
+                <br>
+                {% if search_text != "" %}
+            <a class="btn btn-info" href="/syuunousyasinn">戻る</a>
+            {% endif %}
+            </main>
+{% endblock %}

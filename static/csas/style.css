@@ -1,0 +1,337 @@
+.tamesi{
+    color:blue
+}
+* {
+    margin:0; padding:0;
+  }
+  .text-image {
+    display: flex;
+    background-size: 100% 360px;
+    width: 100%;
+    height: 360px;
+    text-align: center;
+  }
+  
+  .text-image p {
+    margin: auto;
+    font-size: 60px;
+    line-height: 60px;
+    color:sandybrown;
+  }
+  .apuri{
+    color:saddlebrown;  
+    font-size: 70px;
+  }
+  .apuri2{
+    font-size: 80px;
+  }
+  .syuunounobunn{
+    color:red
+  }
+  .btn_a {
+    border-radius: 15px;
+    background-color: blueviolet;
+    padding: 5px;
+    text-decoration: none;
+    color:honeydew;
+  }
+  .btn2 {
+    border-radius: 100px;
+    background-color: red;
+    padding: 5px;
+    text-decoration: none;
+    color:honeydew;
+  }
+  .btn1 {
+    border-radius: 5px;
+    background-color: rgb(0, 34, 255);
+    padding: 0.5px;
+    text-decoration: none;
+    color:honeydew;
+  }
+  table td{
+    font-size: 100%;
+    }
+  table th{
+    font-size: 100%;
+  }
+    .modoru{
+    border-radius: 5px;
+    background-color: blue;
+    padding: 1px;
+    text-decoration: none;
+    color:honeydew;
+    }
+    .sakuzyo{
+    padding: 2px;
+    background-color: red;
+    text-decoration: none;
+    color:black;
+    }
+    .touroku{
+      border-radius: 10px;
+    background-color: darkorchid;
+    padding: 0.5px;
+    text-decoration: none;
+    color:honeydew;
+    }
+    .hennsyuu{
+      padding: 2px;
+      background-color: rgba(122, 225, 122, 0.863);
+      text-decoration: none;
+      color:honeydew;
+    }
+ 
+.top{
+  background-color:black;
+  text-decoration: none;
+  color:honeydew;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+
+      opacity:0.5;
+      cursor: pointer;
+      
+      text-decoration: none;
+      text-align: center;
+      margin: 10px 0;
+      width: 50px;
+      height: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+
+      border-radius: 50%;
+    }
+.top2{
+  background-color:black;
+  text-decoration: none;
+  color:honeydew;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+
+      cursor: pointer;
+      
+      text-decoration: none;
+      text-align: center;
+      margin: 10px 0;
+      width: 50px;
+      height: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+
+      border-radius: 50%;
+
+  position: relative;
+	top: 3px;
+}
+.itirann{
+  background-color: rgba(211, 232, 247, 0.997);
+}
+.iro{
+  background-color: rgb(247, 245, 218);
+}
+
+/* 
+** The Header Media Queries **
+** Tweak as per your needs **
+*/
+.brand {
+  font-weight: bold;
+  font-size: 20px; }
+ 
+.site-header {
+  position: relative;
+  background-color: #def7ff; }
+ 
+.site-header__wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media (min-width: 600px) {
+    .site-header__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0; } }
+@media (min-width: 600px) {
+  .nav__wrapper {
+    display: flex; } }
+ 
+@media (max-width: 599px) {
+  .nav__wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #d9f0f7;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; }
+    .nav__wrapper.active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0); } }
+ 
+.nav__item  {
+  display: block;
+  padding: 1.5rem 1rem; }
+
+ 
+.nav__toggle {
+  display: none; }
+  @media (max-width: 599px) {
+    .nav__toggle {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem; } }
+
+
+/*フォーム全体*/
+#form1{
+  position:absolute;/*フォームの相対位置*/	
+  max-width:100px;/*フォームのサイズ*/
+  margin-bottom:15px;/*フォームの下に余白*/	 	
+  
+  }
+  /*検索ボックス*/
+  #sbox{
+  position:absolute;/*フォームの絶対位置*/	
+  left:0;
+  top:-5px; 	
+  outline:0;/*クリック時の青い枠線消す*/	
+  height:50px;/*検索ボックスの高さ*/	
+  width: 350px;
+  padding:0 10px;/*テキスト位置調整*/	 
+  border-radius:2px 0 0 2px;/*検索ボックスの角を丸める*/		
+  background:#eee;/*検索ボックスの背景カラー*/		
+  }
+  /*検索ボタン*/
+  #sbtn{
+  width:70px;/*検索ボタンの横幅*/ 
+  height:50.1px;/*検索ボタンの縦幅*/ 
+  position:absolute;/*検索ボタンの絶対位置*/  
+  left:350px;/*検索ボタンの位置調整*/  
+  top:-5px;
+  border-radius:0 2px 2px 0;/*検索ボタンの角を丸める*/ 
+  background:#7fbfff;/*検索ボタンの背景カラー*/ 
+  border:none;/*検索ボタンの枠線を消す*/ 
+  color:#fff;/*検索ボタンのテキストカラー*/ 
+  font-weight:bold;/*検索ボタンのテキスト太字*/ 
+  font-size:16px;/*検索ボタンのフォントサイズ*/ 
+  }
+  /*検索ボタンマウスオーバー時*/
+  #sbtn:hover{
+  color:#666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+  }
+
+
+.bunn{
+ top:-100px;
+}
+.zyuyou{
+  color: red;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+
+
+.header {
+  top: 0;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+}
+/*css*/
+/* 回り込みを終了する定型表現。 */
+/*clearfix*/	
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;	
+}
+/*画像と文書を並べて表示時する*/
+  .inner {     
+	float: left ; /*左側に配置する*/
+	}
+  .inner p{
+	float:right;  /*右側に配置する*/
+   }
+   .wrap{ display: flex; flex-wrap: wrap; }
+.apuri3{
+    color: rgb(80, 227, 12);
+    font-size: 50px;
+}
+.hr1 {
+  height: 3px;
+  width: 100%;
+	border-width: 0;
+	background-color: #f3ecec;
+	background-image: -webkit-linear-gradient(right,
+	#ddd6d6 5px,#855454 5px);
+	background-image: linear-gradient(-90deg,
+	#ddd6d6 5px,#855454 5px);
+	background-size: 10px 10px;
+}
+
+.hr1_1 {
+  height: 3px;
+	border-width: 0;
+	background-color: #f3ecec;
+	background-image: -webkit-linear-gradient(right,
+	#ddd6d6 5px,#855454 5px);
+	background-image: linear-gradient(-90deg,
+	#ddd6d6 5px,#855454 5px);
+	background-size: 10px 10px;
+}
+.zyuyou1{
+  color: rgb(80, 227, 12);;
+}
+
+.box22{
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  width: 100%;
+  height: 150px;
+  background: #f4f4f4;
+  border-left: solid 6px #5bb7ae;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+.box22 p {
+  margin: 0; 
+  padding: 0;
+}
+.roguinn{
+  font-size: 80px;
+  color: rgba(247, 151, 6, 0.588);
+}
+.roguinn2{
+  font-size: 50px;
+}
+.logu{
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+    background-color: rgb(0, 255, 72);
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+}
+.site-header-bs {
+  background-color: #DEF7FF; }
+.hituyou{
+  color: red;
+}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+    {% block content %}
+  <br>
+  <br>
+    <style>
+        .mannnaka {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+      </style>
+      <style>
+        .txt{
+            display: inline-block;
+            width: 50%;
+            padding: 1em;
+            border: 1px solid #999;
+            box-sizing: border-box;
+            background: #f2f2f2;
+            margin: 0.5em 0;
+            line-height: 1;
+        }
+        </style>
+        
+      <div class="mannnaka">
+        <h1 class="roguinn">作成</h1>
+        <br>
+        <h1 class="hr1_1"></h1>   
+        <h2 class="roguinn2">名前</h2>
+        <input type="text" required class="txt">
+        <br>
+        <br>
+        <h2 class="roguinn2">パスワード</h2>
+        <input type="password"required class="txt" name="passwordcd ">
+        <br>
+        <br>
+        <h3 class="roguinn2">もう一度パスワードを入力してください</h3>
+        <input type="password"required class="txt" name="passwordcd ">
+        <br>
+        <br>
+        <input type="submit" value="作成" class="logu">
+      </div>
+      <br>
+      {% endblock %}
